@@ -1,7 +1,7 @@
 # StartPanel
 A Start panel for your web browser
 
-hosted over @ startpanel.chrisdev.pl
+hosted over @ http://startpanel.chrisdev.pl
 
 # selfhosting
 
