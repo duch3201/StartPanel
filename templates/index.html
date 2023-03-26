@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./static/app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>StartPage</title>
+</head>
+<body class=" font-mono bg-neutral-50 text-black dark:bg-neutral-800 dark:text-white  duration-900" onload="updateTime(), renderBookmarks()" >
+    <!-- <div></div> -->
+
+    <div class="mt-44">
+        <button class="text-black dark:text-white ml-10" onclick="settings('show')">
+            <span class="material-symbols-outlined hover:animate-spin duration-1000">settings</span>
+        </button>
+        <h1 id="welcome" class="text-2xl ml-11 opacity-50 animate-in fade-in">Welcome</h1>
+        <h1 id="clock" class="text-9xl ml-10 overflow-clip"></h1>
+    </div>
+    
+
+    <div id="bookmarkbar" class="flex justify-left ml-9 mt-1">
+        <!-- <span class="rounded-lg bg-neutral-500 m-4 opacity-50 text-center w-12 h-12 hover:opacity-75 duration-900 " onclick="window.location.href = 'https://youtube.com' ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+        </span>
+        <span class="rounded-lg bg-neutral-500 m-4 opacity-50 text-center w-12 h-12 hover:opacity-75 duration-900 " onclick="window.location.href = 'https://github.com' "><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg"  class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+             </svg>
+        </span>
+        <span class="rounded-lg bg-neutral-500 m-4 opacity-50 text-center w-12 h-12 hover:opacity-75 duration-900 " onclick="window.location.href = 'https://reddit.com' ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M14.238 15.348c.085.084.085.221 0 .306-.465.462-1.194.687-2.231.687l-.008-.002-.008.002c-1.036 0-1.766-.225-2.231-.688-.085-.084-.085-.221 0-.305.084-.084.222-.084.307 0 .379.377 1.008.561 1.924.561l.008.002.008-.002c.915 0 1.544-.184 1.924-.561.085-.084.223-.084.307 0zm-3.44-2.418c0-.507-.414-.919-.922-.919-.509 0-.923.412-.923.919 0 .506.414.918.923.918.508.001.922-.411.922-.918zm13.202-.93c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-5-.129c0-.851-.695-1.543-1.55-1.543-.417 0-.795.167-1.074.435-1.056-.695-2.485-1.137-4.066-1.194l.865-2.724 2.343.549-.003.034c0 .696.569 1.262 1.268 1.262.699 0 1.267-.566 1.267-1.262s-.568-1.262-1.267-1.262c-.537 0-.994.335-1.179.804l-2.525-.592c-.11-.027-.223.037-.257.145l-.965 3.038c-1.656.02-3.155.466-4.258 1.181-.277-.255-.644-.415-1.05-.415-.854.001-1.549.693-1.549 1.544 0 .566.311 1.056.768 1.325-.03.164-.05.331-.05.5 0 2.281 2.805 4.137 6.253 4.137s6.253-1.856 6.253-4.137c0-.16-.017-.317-.044-.472.486-.261.82-.766.82-1.353zm-4.872.141c-.509 0-.922.412-.922.919 0 .506.414.918.922.918s.922-.412.922-.918c0-.507-.413-.919-.922-.919z"/></svg>
+        </span>
+        <span class="rounded-lg bg-neutral-500 m-4 opacity-50 text-center w-12 h-12 hover:opacity-75 duration-900 " onclick="window.location.href = 'https://google.com' ">google</span> -->
+        <h1 class="text-1xl">There aren't any bookmarks here yet! try adding some</h1>
+    </div>
+    
+    
+
+
+
+    <!-- <a href="https://youtube.com" class="rouneded-xl bg-neutral-500 opacity-50 text-center w-10 h-10"> a</a> -->
+
+    <hr class="w-96 h-1 ml-11 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+
+
+    <div>
+        <input type="text" class="mt-1 w-96 ml-11 rounded-l-lg bg-neutral-800 dark:bg-neutral-50 text-black p-1 inline-block dark:text-black" placeholder="Search" id="search">
+        <button onclick="search()" class="bg-neutral-800 p-1 text-white dark:text-black dark:bg-neutral-50 rounded-r-lg">search</button>
+    </div>
+
+    <div id="settings" class="fixed hidden bg-neutral-50 rounded-xl text-black dark:bg-neutral-600 dark:text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-96 z-50">
+        <!-- <dir class="grid grid-cols-2 grid-rows-1"> -->
+            <span>
+                <button onclick="settings('hide')" class="p-1 m-4 bg-neutral-800 dark:bg-neutral-50 hover:bg-red-600 rounded-md">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </button>
+            </span>
+            
+            <span class="text-lg font-bold mt-5">Add bookmark</span>
+
+            <div class="grid grid-rows-2 grid-cols-1">
+                <input type="text" name="Bookmarkname" class="rounded-lg mt-2 text-white dark:text-black" id="bname" placeholder="Bookmark name" required>
+                <input type="text" name="Bookmarkurl"  class="rounded-lg mt-3 text-white dark:text-black" id="burl" placeholder="Bookmark URL" required>
+                
+            </div>
+            <button onclick="addBookmark()">save</button>
+
+        <!-- </dir> -->
+    </div>
+
+
+</body>
+</html>
